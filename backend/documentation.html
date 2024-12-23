@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      background-color: #1e1e2e;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    nav {
+      width: 240px;
+      background-color: #25273c;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #61dafb;
+    }
+    nav ul {
+      list-style-type: none;
+    }
+    nav ul li {
+      margin: 15px 0;
+    }
+    nav ul li a {
+      color: #a6b5c6;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #61dafb;
+      margin-left: 10px;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #61dafb;
+      display: inline-block;
+    }
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #c4c4c4;
+    }
+
+    /* Code Block */
+    pre {
+      background-color: #2d2f3e;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: #ffffff;
+      margin-top: 10px;
+    }
+    code {
+      color: #f78c6c;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      color: #888;
+      background-color: #25273c;
+      position: relative;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav>
+    <h1>API Docs</h1>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#authentication">Authentication</a></li>
+      <li><a href="#endpoints">Endpoints</a></li>
+      <li><a href="#examples">Examples</a></li>
+      <li><a href="#error-handling">Error Handling</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>Welcome to the <strong>Medeval</strong> documentation. This API allows you to access data, perform operations, and integrate it with your application seamlessly.</p>
+    </section>
+
+    <section id="authentication">
+      <h2>Authentication</h2>
+      <p>To access the API, include your API key in the request header:</p>
+      <pre><code>curl -H "Authorization: Bearer YOUR_API_KEY" https://api.example.com/resource</code></pre>
+    </section>
+
+    <section id="endpoints">
+      <h2>Endpoints</h2>
+      <p>Here are the available API endpoints:</p>
+      <pre>
+<code>GET /api/patients   - Fetch a list of all patients
+GET /api/patientlogin     - Fetch user details by Email
+POST /api/patientsignup   - Create a new user
+PUT /api/patientupdate    - Update user details
+DELETE /api/patient    - Delete a user</code>
+      </pre>
+
+      <p>
+        * The above structure is applicable to other API endpoints (e.g Doctor, Pharmacist)
+      </p>
+    </section>
+
+    <section id="examples">
+      <h2>Examples</h2>
+      <p>Example of fetching all patients:</p>
+      <pre><code>curl -X GET https://hlbdev.tech/api/patients</code></pre>
+      <p>All data required to create patient:</p>
+      <pre>
+<code>curl -X POST https://api.example.com/users \
+-H "Content-Type: application/json" \
+-d '{
+"firstname": [string],
+"lastname": [string],
+"email": [string],
+"password": [string],
+"DOB": [date],
+"countryCode": [string],
+"phoneNumber": [string],
+"gender": [string],
+"country": [string],
+"height": [float],
+"weight": [string],
+"maritalStatus": [string],
+"age": [int],
+"nin": [string]
+}'</code>
+      </pre>
+      <ul>
+        <b>Note:</b>
+        <li>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;All payload must come in the request body, NO params! </br>
+        </li>
+      </ul>
+    </section>
+
+    <section id="error-handling">
+      <h2>Error Handling</h2>
+      <p>Errors are returned in JSON format. Example response:</p>
+      <pre>
+<code>{
+  "error": {
+    "code": 401,
+    "message": "Unauthorized. Invalid API key."
+  }
+}</code>
+      </pre>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Medeval. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+version: "3.7"
+services:
+  medeval-db:
+    image: mysql:8.0
+    container_name: medeval-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: medvl_dev
+      MYSQL_DATABASE: medvl_development
+      MYSQL_USER: medvl_dev
+      MYSQL_PASSWORD: medvl_dev
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - medeval-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  medeval-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: medeval-backend
+    restart: always
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      medeval-db:
+        condition: service_healthy
+    networks:
+      - medeval-network
+
+networks:
+  medeval-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
