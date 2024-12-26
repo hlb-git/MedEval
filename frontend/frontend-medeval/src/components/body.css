@@ -1,0 +1,76 @@
+.background {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background: #0C513F;
+    background-image: url("../assets/linesBg.png");
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    width: 100%;
+    border-top: 7px solid #353535;
+    padding: 2 2rem;
+  }
+
+  .start-health {
+    margin-top: -10rem;
+    height: 35rem;
+    border-radius: 30px;
+    width: 70rem;
+    background: #ffedb3;
+    border: 5px solid #161616;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0 2rem;
+    background-image: url("../assets/liness.png");
+    background-size: cover;
+    background-position: bottom;
+    
+  }
+
+  .left {
+    display: block;
+    align-items: center;
+    flex: 2;
+    padding-right: 2rem;
+    color: #0C513F;
+
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 1rem 0;
+    margin-right: 2rem;
+  }
+
+  .review {
+    border: 6px solid #000;
+    border-radius: 40px;
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+  }
+.google {
+  object-fit: contain;
+  /* margin-left: 3rem; */
+  margin-bottom: 5rem;
+  flex: 1
+}
+.apple {
+  object-fit: contain;
+  /* margin-left: 3rem; */
+  margin-bottom: 5rem;
+  flex: 1;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
