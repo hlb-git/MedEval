@@ -3,7 +3,7 @@
     /* align-items: center; */
     justify-content: center;
     background: #0C513F;
-    background-image: url("../assets/linesBg.png");
+    background-image: url("../../assets/linesBg.png");
     background-size: cover;
     background-position: top;
     height: 100vh;
@@ -14,30 +14,44 @@
 
   .start-health {
     margin-top: -10rem;
-    height: 40rem;
+    height: 35rem;
     border-radius: 30px;
     width: 70rem;
-    background: #ffedb3;
+    background: #8d6ade;
     border: 5px solid #161616;
     display: flex;
     justify-content: center;
     font-family: "Poppins", sans-serif;
     font-size: 50px;
     font-weight: 700;
-    padding: 0 2rem;
-    background-image: url("../assets/liness.png");
+    padding: 0 0 0rem 0;
+    background-image: url("../../assets/liness.png");
     background-size: cover;
     background-position: bottom;
     
   }
 
+  .left h2 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    padding: 2rem 0 0 2rem;
+  }
+  .left p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    padding: 0 2rem;
+  }
   .left {
     display: block;
     align-items: center;
     flex: 1;
     /* padding-right: 2rem; */
     padding-left: 2rem;
-    color: #0C513F;
+    color: #fff;
   }
 
   .right {
@@ -45,15 +59,14 @@
     height: 100%;
     align-items: center;
     flex: 1;
-    margin-right: 1rem;
-    
   }
-
-  .review {
-    border: 6px solid #000;
-    border-radius: 40px;
-    height: 35rem;
-    width: 25rem;
+  
+  .telemed {
+    border-left: 5px solid #353535;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 
   .icons {
