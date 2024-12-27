@@ -1,5 +1,5 @@
 import "./header.css";
-import medvLogo from "../assets/medeval-logo.png";
+import medvLogo from "../../assets/medeval-logo.png";
 
 function Header() {
   return (

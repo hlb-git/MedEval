@@ -1,7 +1,7 @@
 import "./body.css";
-import review from "../assets/review.jpg";
-import google from "../assets/google.png";
-import apple from "../assets/apple.png";
+import review from "../../assets/review.jpg";
+import google from "../../assets/google.png";
+import apple from "../../assets/apple.png";
 
 function Body() {
   return (

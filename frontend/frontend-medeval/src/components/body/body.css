@@ -14,7 +14,7 @@
 
   .start-health {
     margin-top: -10rem;
-    height: 35rem;
+    height: 40rem;
     border-radius: 30px;
     width: 70rem;
     background: #ffedb3;
@@ -34,27 +34,35 @@
   .left {
     display: block;
     align-items: center;
-    flex: 2;
-    padding-right: 2rem;
+    flex: 1;
+    /* padding-right: 2rem; */
+    padding-left: 2rem;
     color: #0C513F;
-
   }
 
   .right {
     display: flex;
+    height: 100%;
     align-items: center;
     flex: 1;
-    margin: 1rem 0;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    
   }
 
   .review {
     border: 6px solid #000;
     border-radius: 40px;
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; 
+    height: 35rem;
+    width: 25rem;
   }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-left: 2rem;
+  }
+
 .google {
   object-fit: contain;
   /* margin-left: 3rem; */
@@ -66,11 +74,5 @@
   /* margin-left: 3rem; */
   margin-bottom: 5rem;
   flex: 1;
-}
-.icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  margin-left: 2rem;
 }
 
