@@ -1,3 +1,5 @@
+const logger = require("./logs/logger.js");
+const morgan = require("morgan");
 const express = require('express');
 const models = require('./models/index');
 const sequelize = require('./config/db_connection');
@@ -20,10 +22,27 @@ sequelize.sync({force: false})
 })
 .catch(err => console.log('Error syncing database:', err));
 
+const morganFormat = ":method :url :status :response-time ms";
+
+
+app.use(
+    morgan(morganFormat, {
+        stream: {
+            write: (message) => {
+                    const logObject = {
+                        method: message.split(" ")[0],
+                        url: message.split(" ")[1],
+                        status: message.split(" ")[2],
+                        responseTime: message.split(" ")[3],
+                    };
+                    logger.info(JSON.stringify(logObject));
+                },
+            },
+        })
+);
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/documentation.html');
 });
-
 app.use(patientRoutes);
 app.use(doctorRoutes);
 app.use(pharmacistRoutes);

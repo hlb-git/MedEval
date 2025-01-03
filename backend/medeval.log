@@ -1,0 +1,2 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/patients\",\"status\":\"304\",\"responseTime\":\"117.266\"}","timestamp":"2025-01-03T07:30:43.394Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/patients\",\"status\":\"304\",\"responseTime\":\"149.420\"}","timestamp":"2025-01-03T07:41:15.230Z"}
