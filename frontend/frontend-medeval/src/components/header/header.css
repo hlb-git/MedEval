@@ -1,6 +1,6 @@
 .h-wrapper {
     background: #e6e6dd;
-    margin: 0 4%;
+    margin: 0.5rem 4% 0 4%;
     border-radius: 30px;
     padding: 0 2rem;
     box-shadow: 5px 5px 15px rgba(197, 197, 197, 0.5);
