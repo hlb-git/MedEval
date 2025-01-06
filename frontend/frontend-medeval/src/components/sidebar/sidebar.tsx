@@ -1,6 +1,6 @@
 import "./sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTachometerAlt,
+import { faChartLine,
   faCalendarCheck,
   faFileMedical,
   faVideo,
@@ -20,8 +20,8 @@ function Sidebar() {
         <br></br>
         <ul className="sbar_menu">
         <li>
-            <FontAwesomeIcon icon={faTachometerAlt} className="icon" />
-            Dashboard
+            <FontAwesomeIcon icon={faChartLine} className="icon" />
+           Overview 
           </li>
           <li>
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />

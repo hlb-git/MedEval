@@ -13,19 +13,19 @@
     padding-bottom: 10rem;
 }
 
-.hero-content h2 {
-    font-size: 55px;
-    font-weight: 900;
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: 800;
     margin-bottom: 3rem;
-    font-family: "Fraunces";
-    padding: 0 5rem;
+    font-family: "Public Sans";
+    padding: 0 6rem;
 }
 .hero-content p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom: 2rem;
     padding: 0 22rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Public Sans", sans-serif;
     color:#535353
 }
 

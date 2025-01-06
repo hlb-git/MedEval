@@ -5,10 +5,10 @@ function Hero() {
     <section className="hero-wrapper">
       <div className="hero-container">
         <div className="hero-content">
-          <h2>
+          <h1>
             Revolutionizing healthcare with seamless telemedicine and secure
             digital medical records
-          </h2>
+          </h1>
           <p>
             MedEval is a digital health platform that provides telemedicine
             services and secure digital medical records for patients and

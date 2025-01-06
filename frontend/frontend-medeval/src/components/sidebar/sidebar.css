@@ -1,27 +1,90 @@
+/* Sidebar Wrapper */
 .sbar_wrapper {
-  margin-top: 1rem;
+  margin-top: 0; /* Resetting extra margin */
   width: 15%;
   height: 100vh;
-  border-right: 2px solid #000;
+  border-right: 1px solid #ddd; /* Subtle border for a modern look */
+  background: #F1F0EE; /* Clean white background */
   display: flex;
   flex-direction: column;
-  background: #f1f0ee;
   padding: 0;
-  margin: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth animations */
 }
 
+/* Sidebar Container */
 .sbar_container {
   display: flex;
-  font-family: "Public Sans";
+  font-family: "Public Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  height: 100%; 
-  align-items: center;
-  flex-direction: column; 
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between; /* Spread menu and controls */
+  padding: 1rem;
 }
+
+/* Sidebar Menu & Controls */
 .sbar_menu, .controls {
   list-style-type: none;
-  padding: 0; 
+  padding: 0;
   margin: 0;
+  font-weight: 600; 
+
+}
+
+.sbar_menu li, .controls li {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px; 
+  color: #333; 
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sbar_menu li:hover, .controls li:hover {
+  background: #fff; 
+  color: #8d6ade;
+  box-shadow: 2px 2px 0.5px 0.5px #ddd;
+}
+
+.sbar_menu li.active, .controls li.active {
+  background: #007bff;
+  color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  margin-right: 10px;
+  color: inherit;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+/* Welcome Message */
+.welcome {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444; /* Slightly lighter text color */
+  margin-bottom: 2rem; /* Spacing below welcome message */
+  text-align: center; /* Center text */
+}
+
+/* Mobile Responsive (Optional) */
+@media (max-width: 768px) {
+  .sbar_wrapper {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none; /* Remove shadow for mobile */
+  }
+  .sbar_menu li, .controls li {
+    padding: 0.5rem;
+    margin: 0.2rem;
+  }
 }
 
