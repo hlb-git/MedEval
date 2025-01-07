@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
@@ -15,15 +16,19 @@ import {
 from 'mdb-react-ui-kit';
 
 function Auth() {
+  const [isSignup, setSignup] = useState(true);
+
+  const toggleView = () => setSignup((prev) => (!prev));
+
   return (
     <MDBContainer fluid>
 
-      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+      <MDBCard className='text-black m-5' style={{borderRadius: '25px', background: "#F1F0EE"}}>
         <MDBCardBody>
           <MDBRow>
-            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center' style={{height: '75vh'}}>
+            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center' style={{height: '75vh', background: "#F1F0EE"}}>
 
-              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">{isSignup ? "Sign Up" : "Login"}</p>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
@@ -49,7 +54,7 @@ function Auth() {
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
-              <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp' fluid/>
+              <MDBCardImage style={{borderRadius: "20px"}} src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp' fluid/>
             </MDBCol>
 
           </MDBRow>
