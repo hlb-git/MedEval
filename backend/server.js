@@ -1,7 +1,6 @@
 const logger = require("./logs/logger.js");
 const morgan = require("morgan");
 const express = require('express');
-const models = require('./models/index');
 const sequelize = require('./config/db_connection');
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -18,6 +17,7 @@ sequelize.sync({force: false})
     console.log('Database synced successfully...');
     app.listen(PORT, '0.0.0.0', ()=> {
         console.log(`Server Active: Listening on port ${PORT}...`);
+
     });
 })
 .catch(err => console.log('Error syncing database:', err));

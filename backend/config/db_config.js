@@ -4,7 +4,7 @@ module.exports = {
         username: "medvl_dev",
         password: "medvl_dev",
         database: "medvl_development",
-        host: "medeval-db", // use "localhost" if not running with a docker compose
+        host:   process.env.HOST, // use "localhost" if not running with a docker compose
         dialect: "mysql",
         port: 3306
     },
