@@ -1,3 +1,4 @@
+import Register from '../components/authentications';
 import React, {useState} from 'react';
 import illustration from '../assets/illustration.jpg';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -31,13 +32,18 @@ function Auth() {
             <MDBCol md='10' lg='6' 
             className='order-2 order-lg-1 d-flex flex-column 
             justify-content-center align-items-center' 
-            style={{height: '75vh', background: "#F1F0EE"}}>
+            style={{height: '80vh', background: "#F1F0EE"}}>
 
               <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">{
                 isSignup ? "Sign Up" : "Login"}</p>
 
               {isSignup ? (
                 <>
+                  <div className="d-flex flex-row align-items-center mb-4 ">
+                    <MDBIcon fas icon="user me-3" size='lg'/>
+                    <MDBInput label='Your Name' id='form1' type='text' 
+                    className='w-100'/>
+                  </div>
                   <div className="d-flex flex-row align-items-center mb-4">
                     <MDBIcon fas icon="envelope me-3" size='lg'/>
                     <MDBInput label='Your Email' id='form2' type='email'/>
@@ -80,7 +86,7 @@ function Auth() {
                 </a>
               </p>
 
-              <MDBBtn className='mb-4' size='lg'>Register</MDBBtn>
+              <MDBBtn className='mb-4' size='lg' onClick={Register()}>Register</MDBBtn>
 
             </MDBCol>
 
