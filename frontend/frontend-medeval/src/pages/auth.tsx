@@ -23,7 +23,7 @@ function Auth() {
     name: "",
     email: "",
     password: "",
-    repeatedPassword: ""
+    repeatPassword: ""
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,18 +31,20 @@ function Auth() {
 
     setFormData((prev) => ({
       ...prev,
-      [id]: type === "checked" ? checked : value,
+      [id]: type === "checkbox" ? checked : value,
     }));
   };
 
-    const toggleView = () => setSignup((prev) => (!prev));
+  const toggleView = () => setSignup((prev) => (!prev));
 
-    const handleSubmit = (e: react.changeevent<htmlinputelement>) => {
-      e.preventDefault();
-      console.log("payload:", formData);
-    }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("payload:", formData);
+    const response = Register(formData);
+    console.log(response);
+   }
 
-    return (
+  return (
       <MDBContainer fluid>
 
         <MDBCard className='text-black m-5' style={{
@@ -55,6 +57,7 @@ function Auth() {
             justify-content-center align-items-center'
                 style={{ height: '80vh', background: "#F1F0EE" }}>
 
+                <form onSubmit={handleSubmit}>
                 <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">{
                   isSignup ? "Sign Up" : "Login"}</p>
 
@@ -62,22 +65,42 @@ function Auth() {
                   <>
                     <div className="d-flex flex-row align-items-center mb-4 ">
                       <MDBIcon fas icon="user me-3" size='lg' />
-                      <MDBInput label='Your Name' id='form1' type='text'
-                        className='w-100' />
+                      <MDBInput 
+                        label='Your Name' 
+                        id='name' type='text' 
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
                     </div>
                     <div className="d-flex flex-row align-items-center mb-4">
                       <MDBIcon fas icon="envelope me-3" size='lg' />
-                      <MDBInput label='Your Email' id='form2' type='email' />
+                      <MDBInput 
+                        label='Your Email' 
+                        id='email'
+                        type='email' 
+                        value={formData.email}
+                        onChange={handleChange} />
                     </div>
 
                     <div className="d-flex flex-row align-items-center mb-4">
                       <MDBIcon fas icon="lock me-3" size='lg' />
-                      <MDBInput label='Password' id='form3' type='password' />
+                      <MDBInput 
+                        label='Password' 
+                        id='password'
+                        type='password' 
+                        value={formData.password}
+                        onChange={handleChange}/>
                     </div>
 
                     <div className="d-flex flex-row align-items-center mb-4">
                       <MDBIcon fas icon="key me-3" size='lg' />
-                      <MDBInput label='Repeat your password' id='form4' type='password' />
+                      <MDBInput 
+                        label='Repeat your password' 
+                        id='repeatPassword' 
+                        type='password'
+                        value={formData.repeatPassword}
+                        onChange={handleChange}
+                        />
                     </div>
                     <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault'
                       label='Subscribe to our newsletter' />
@@ -87,12 +110,21 @@ function Auth() {
                   <>
                     <div className="d-flex flex-row align-items-center mb-4">
                       <MDBIcon fas icon="envelope me-3" size='lg' />
-                      <MDBInput label='Your Email' id='form2' type='email' />
+                      <MDBInput 
+                        label='Your Email' 
+                        id='email'
+                        type='email' 
+                        value={formData.email}
+                        onChange={handleChange} />
                     </div>
 
                     <div className="d-flex flex-row align-items-center mb-4">
                       <MDBIcon fas icon="lock me-3" size='lg' />
-                      <MDBInput label='Password' id='form3' type='password' />
+                      <MDBInput 
+                        label='Password' 
+                        id='password'
+                        type='password' 
+                        value={formData.password}/>
                     </div>
                   </>
                 )}
@@ -107,8 +139,9 @@ function Auth() {
                   </a>
                 </p>
 
-                <MDBBtn className='mb-4' size='lg' onClick={Register()}>Register</MDBBtn>
+                <MDBBtn className='mb-4' size='lg' type='submit'>Register</MDBBtn>
 
+              </form>
               </MDBCol>
 
               <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
@@ -120,7 +153,7 @@ function Auth() {
         </MDBCard>
 
       </MDBContainer>
-    );
-  };
+  );
+};
 
   export default Auth;
