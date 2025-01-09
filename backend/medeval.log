@@ -1,6 +1,0 @@
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/patients\",\"status\":\"304\",\"responseTime\":\"117.266\"}","timestamp":"2025-01-03T07:30:43.394Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/patients\",\"status\":\"304\",\"responseTime\":\"149.420\"}","timestamp":"2025-01-03T07:41:15.230Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/\",\"status\":\"404\",\"responseTime\":\"66.899\"}","timestamp":"2025-01-08T17:45:12.142Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/\",\"status\":\"404\",\"responseTime\":\"44.380\"}","timestamp":"2025-01-08T17:45:12.263Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/\",\"status\":\"404\",\"responseTime\":\"2.335\"}","timestamp":"2025-01-08T17:45:17.974Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/\",\"status\":\"404\",\"responseTime\":\"2.801\"}","timestamp":"2025-01-08T17:45:17.984Z"}

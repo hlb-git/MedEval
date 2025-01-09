@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function Register(payload:{[key: string]: any }) {
-  axios.post('http://localhost:5000', payload)
+  axios.post('http://localhost:5000/api/patientsignup', payload)
     .then(response => {return (response);
   })
     .catch(error => {return `Error Registering User: ${error}`;})
