@@ -37,10 +37,10 @@ function Auth() {
 
   const toggleView = () => setSignup((prev) => (!prev));
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("payload:", formData);
-    const response = Register(formData);
+    const response = await Register(formData);
     console.log(response);
    }
 

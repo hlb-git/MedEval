@@ -1,3 +1,4 @@
+const cors = require("cors");
 const logger = require("./logs/logger.js");
 const morgan = require("morgan");
 const express = require('express');
@@ -24,6 +25,11 @@ sequelize.sync({force: false})
 
 const morganFormat = ":method :url :status :response-time ms";
 
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 app.use(
     morgan(morganFormat, {
