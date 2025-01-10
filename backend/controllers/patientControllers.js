@@ -52,6 +52,7 @@ const patientSignup = async (req, res) => {
         res.status(201).json(Patient.redacted(createdPatient.toJSON()));
     }
     catch (error) {
+        console.log("Error:", error);
         res.status(500).json({error: error.message});
     }
 }
