@@ -1,10 +1,15 @@
 import axios from 'axios';
 
-function Register(payload:{[key: string]: any }) {
-  axios.post('http://localhost:5000/api/patientsignup', payload)
-    .then(response => {return (response);
-  })
-    .catch(error => {return `Error Registering User: ${error}`;})
+async function Register(payload:{[key: string]: any }) {
+  return await axios.post('http://localhost:5000/api/patientsignup', payload)
+    .then(response => response)
+    .catch(error => `Error Registering User: ${error}`)
 }
 
-export default Register;
+async function FetchPatients() {
+  return await axios.get('http://localhost:5000/api/patients')
+    .then(response => response)
+    .catch(error => `Error fetching patients: ${error}`)
+}
+
+export { Register, FetchPatients };

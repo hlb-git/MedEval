@@ -1,4 +1,4 @@
-import Register from '../components/authentications';
+import { Register, FetchPatients } from '../components/authentications';
 import React, { useState } from 'react';
 import illustration from '../assets/illustration.jpg';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
