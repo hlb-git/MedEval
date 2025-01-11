@@ -1,4 +1,4 @@
-import { Register, FetchPatients } from '../components/authentications';
+import { NewPatient, FetchPatients } from '../components/authentications';
 import React, { useState } from 'react';
 import illustration from '../assets/illustration.jpg';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -20,7 +20,7 @@ import {
 function Auth() {
   const [isSignup, setSignup] = useState(true);
   const [formData, setFormData] = useState({
-    name: "",
+    fullname: "",
     email: "",
     password: "",
     repeatPassword: ""
@@ -40,7 +40,7 @@ function Auth() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("payload:", formData);
-    const response = await Register(formData);
+    const response = await NewPatient(formData);
     console.log(response);
    }
 
@@ -67,8 +67,8 @@ function Auth() {
                       <MDBIcon fas icon="user me-3" size='lg' />
                       <MDBInput 
                         label='Your Name' 
-                        id='name' type='text' 
-                        value={formData.name}
+                        id='fullname' type='text' 
+                        value={formData.fullname}
                         onChange={handleChange}
                       />
                     </div>
