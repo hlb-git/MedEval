@@ -9,7 +9,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/api/patients', getAllPatients);
-router.get('/api/patientlogin', patientLogin);
+router.post('/api/patientlogin', patientLogin);
 router.put('/api/patientupdate', updateByEmail);
 router.post('/api/patientsignup', patientSignup);
 

@@ -1,4 +1,4 @@
-import { NewPatient, FetchPatients } from '../components/authentications';
+import { NewPatient, FetchPatients, Login } from '../components/authentications';
 import React, { useState } from 'react';
 import illustration from '../assets/illustration.jpg';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -37,10 +37,17 @@ function Auth() {
 
   const toggleView = () => setSignup((prev) => (!prev));
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("payload:", formData);
     const response = await NewPatient(formData);
+    console.log(response);
+   }
+
+
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+    const response = await Login(formData);
     console.log(response);
    }
 
@@ -57,7 +64,7 @@ function Auth() {
             justify-content-center align-items-center'
                 style={{ height: '80vh', background: "#F1F0EE" }}>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit= {isSignup ? handleSignup : handleLogin}>
                 <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">{
                   isSignup ? "Sign Up" : "Login"}</p>
 
@@ -66,7 +73,7 @@ function Auth() {
                     <div className="d-flex flex-row align-items-center mb-4 ">
                       <MDBIcon fas icon="user me-3" size='lg' />
                       <MDBInput 
-                        label='Your Name' 
+                        label='Your Fullname (Firstname first)' 
                         id='fullname' type='text' 
                         value={formData.fullname}
                         onChange={handleChange}
@@ -124,7 +131,8 @@ function Auth() {
                         label='Password' 
                         id='password'
                         type='password' 
-                        value={formData.password}/>
+                        value={formData.password}
+                        onChange={handleChange}/>
                     </div>
                   </>
                 )}

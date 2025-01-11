@@ -8,9 +8,11 @@ async function NewPatient(payload:{[key: string]: any }) {
   }
   payload['country'] = 'Unknown';
   return await axios.post('http://localhost:5000/api/patientsignup', payload)
-    .then(response => response)
+    .then(response => response.data)
     .catch(error => `Error Registering User: ${error}`)
 }
+
+
 
 async function FetchPatients() {
   return await axios.get('http://localhost:5000/api/patients')
@@ -18,4 +20,16 @@ async function FetchPatients() {
     .catch(error => `Error fetching patients: ${error}`)
 }
 
-export { NewPatient, FetchPatients };
+
+
+async function Login(payload: {[key: string]: any}){
+  delete payload.fullname;
+  delete payload.repeatPassword;
+  return await axios.post('http://localhost:5000/api/patientlogin',payload)
+    .then(response => response.data)
+    .catch(error => `User doesn't exist: ${error}`)
+}
+
+
+
+export { NewPatient, FetchPatients, Login };
