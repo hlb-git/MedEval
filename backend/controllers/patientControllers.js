@@ -47,7 +47,6 @@ const updateByEmail = async (req, res) => {
 const patientSignup = async (req, res) => {
     try {
         const attributes = req.body;
-        console.log(attributes);
         const createdPatient = await Patient.create(new Patient(attributes));
         res.status(201).json(Patient.redacted(createdPatient.toJSON()));
     }
