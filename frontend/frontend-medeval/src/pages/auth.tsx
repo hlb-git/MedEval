@@ -46,7 +46,6 @@ function Auth() {
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
     const response = await Login(formData);
     console.log(response);
    }
@@ -147,7 +146,7 @@ function Auth() {
                   </a>
                 </p>
 
-                <MDBBtn className='mb-4' size='lg' type='submit'>Register</MDBBtn>
+                <MDBBtn className='mb-4' size='lg' type='submit'>{isSignup ? 'Signup' : 'Login'}</MDBBtn>
 
               </form>
               </MDBCol>
