@@ -28,10 +28,6 @@ function Auth() {
     repeatPassword: ""
   });
 
-  const handleNavigate = () => {
-    navigate('/dashboard');
-  }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value, type, checked } = e.target;
 
@@ -43,6 +39,7 @@ function Auth() {
 
   const toggleView = () => setSignup((prev) => (!prev));
 
+
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await NewPatient(formData);
@@ -53,9 +50,8 @@ function Auth() {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await Login(formData);
-    handleNavigate();
-
     console.log(response);
+    navigate('/dashboard', { state: {response}});
    }
 
   return (

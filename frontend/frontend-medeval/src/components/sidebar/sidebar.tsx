@@ -11,12 +11,13 @@ import { faChartLine,
   faSignOutAlt, 
 } from "@fortawesome/free-solid-svg-icons";
 
-function Sidebar() {
+function Sidebar({data}: {data: {[key: string]: any}}) {
+  console.log(data);
   return (
     <div className="sbar_wrapper">
       <div className="sbar_container">
-        <span className="welcome"> Welcome, [firstname] </span>
-        <span className="email"> [email] </span>
+        <span className="welcome"> Welcome, {data.firstname} </span>
+        <span className="email"> {data.email} </span>
         <br></br>
         <ul className="sbar_menu">
         <li>
