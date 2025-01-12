@@ -1,4 +1,5 @@
 import { NewPatient, FetchPatients, Login } from '../components/authentications';
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import illustration from '../assets/illustration.jpg';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -19,12 +20,17 @@ import {
 
 function Auth() {
   const [isSignup, setSignup] = useState(true);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
     password: "",
     repeatPassword: ""
   });
+
+  const handleNavigate = () => {
+    navigate('/dashboard');
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value, type, checked } = e.target;
@@ -47,6 +53,8 @@ function Auth() {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await Login(formData);
+    handleNavigate();
+
     console.log(response);
    }
 
