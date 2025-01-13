@@ -16,9 +16,10 @@ function Sidebar({data}: {data: {[key: string]: any}}) {
   return (
     <div className="sbar_wrapper">
       <div className="sbar_container">
-        <span className="welcome"> Welcome, {data.firstname} </span>
-        <span className="email"> {data.email} </span>
-        <br></br>
+        <div className="profile">
+          <span className="welcome"> Welcome, {data.firstname} </span>
+          <span className="email"> {data.email} </span>
+        </div>
         <ul className="sbar_menu">
         <li>
             <FontAwesomeIcon icon={faChartLine} className="icon" />
