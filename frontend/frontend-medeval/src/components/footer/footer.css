@@ -1,6 +1,5 @@
 .f-wrapper {
     background-color: #000;
-    height: 70vh;
     padding: 20px;
     text-align: center;
     border-top: 5px solid #8D6ADE;
@@ -8,11 +7,11 @@
   }
 
   .f-container {
+    height: 60vh;
     padding: 5rem 6rem;
   }
 
   .footer-top {
-    margin-bottom: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -26,8 +25,9 @@
 
   .footer-links h3 {
     margin-top: 0;
-    font-size: 30px;
+    font-size: 20px;
     font-family: "Fraunces";
+    font-weight: 800;
     color: #fff
   }
 
@@ -54,9 +54,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 2px solid #929292;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #929292;
   }
 
   .footer-bottom p {

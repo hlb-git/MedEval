@@ -42,15 +42,6 @@
   border-radius: 8px;
 
 }
-.welcome{
-  color: #000;
-  font-weight: 900;
-  font-size: 20px;
-}
-.email {
-  color: #707b7c;
-;
-}
 
 .sbar_menu li, .controls li {
   display: flex;
@@ -85,10 +76,13 @@
 /* Welcome Message */
 .welcome {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: #444; /* Slightly lighter text color */
   margin-bottom: 2rem; /* Spacing below welcome message */
   text-align: center; /* Center text */
+}
+.email {
+  color: #707b7c;
 }
 
 /* Mobile Responsive (Optional) */

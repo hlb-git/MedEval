@@ -11,9 +11,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={
-          <div className="app">
             <Home />
-          </div>} />
+          } />
         <Route path="/dashboard" element={
           <Dashboard />}/>
         <Route path="/auth" element={
