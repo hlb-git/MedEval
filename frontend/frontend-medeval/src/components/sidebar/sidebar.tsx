@@ -12,7 +12,6 @@ import { faChartLine,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar({data}: {data: {[key: string]: any}}) {
-  console.log(data);
   return (
     <div className="sbar_wrapper">
       <div className="sbar_container">

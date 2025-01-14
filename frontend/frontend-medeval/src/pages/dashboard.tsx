@@ -3,11 +3,11 @@ import {useLocation} from 'react-router-dom';
 
 
 function Dashboard() {
-  const {response} = useLocation().state; 
+  const {data} = useLocation().state; 
 	return(
 		<>
 			<div>
-                <Sidebar data={response}/>
+                <Sidebar data={data}/>
 			</div>
 		</>
 	);

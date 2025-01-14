@@ -23,12 +23,16 @@ async function FetchPatients() {
 
 
 async function Login(email: string, password: string){
-  return await axios.post('http://localhost:5000/api/patientlogin', {
-    email: email,
-    password: password
-  })
-    .then(response => response)
-    .catch(error => `User doesn't exist: ${error}`)
+  try {
+    const response = await axios.post('http://localhost:5000/api/patientlogin'      , {
+      email: email,
+      password: password
+      })
+    return response;
+  } catch (error: any) {
+    alert("Login Failed: Wrong Credentials")
+    throw new Error(
+      `Login failed: ${error.response?.data?.error || error.message}`)}
 }
 
 

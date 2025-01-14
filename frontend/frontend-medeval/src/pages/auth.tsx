@@ -50,12 +50,10 @@ function Auth() {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await Login(formData.email, formData.password);
-    console.log(response);
-    if (response){
-      navigate('/dashboard', { state: {response}});
-    }else {
-      alert("Login Failed");
-    };
+    if (response.status === 200){
+      const data = response.data
+      navigate('/dashboard', { state: {data}});
+    }
   };
 
 
