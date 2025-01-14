@@ -1,4 +1,4 @@
-import { NewPatient, FetchPatients, Login } from '../components/authentications';
+import { NewPatient, Login } from '../components/authentications';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import illustration from '../assets/illustration.jpg';
@@ -19,7 +19,7 @@ import {
   from 'mdb-react-ui-kit';
 
 function Auth() {
-  const [isSignup, setSignup] = useState(true);
+  const [isSignup, setSignup] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullname: "",
@@ -49,10 +49,15 @@ function Auth() {
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await Login(formData);
+    const response = await Login(formData.email, formData.password);
     console.log(response);
-    navigate('/dashboard', { state: {response}});
-   }
+    if (response){
+      navigate('/dashboard', { state: {response}});
+    }else {
+      alert("Login Failed");
+    };
+  };
+
 
   return (
       <MDBContainer fluid>
@@ -166,5 +171,4 @@ function Auth() {
       </MDBContainer>
   );
 };
-
   export default Auth;

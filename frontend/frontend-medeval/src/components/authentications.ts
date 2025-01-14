@@ -22,11 +22,12 @@ async function FetchPatients() {
 
 
 
-async function Login(payload: {[key: string]: any}){
-  delete payload.fullname;
-  delete payload.repeatPassword;
-  return await axios.post('http://localhost:5000/api/patientlogin',payload)
-    .then(response => response.data)
+async function Login(email: string, password: string){
+  return await axios.post('http://localhost:5000/api/patientlogin', {
+    email: email,
+    password: password
+  })
+    .then(response => response)
     .catch(error => `User doesn't exist: ${error}`)
 }
 
