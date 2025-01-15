@@ -68,7 +68,7 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.selected{
+#selected{  /* for highlighting current page */
   background: #6876D1;
   color: #fff;
 }
