@@ -20,9 +20,9 @@ function Sidebar({data}: {data: {[key: string]: any}}) {
           <span className="email"> {data.email} </span>
         </div>
         <ul className="sbar_menu">
-        <li>
-            <FontAwesomeIcon icon={faChartLine} className="icon" />
-           Overview 
+        <li className={data.page === 'Dashboard' ? "selected": ""}>
+            <FontAwesomeIcon icon={faChartLine} className="icon"/>
+           Dashboard 
           </li>
           <li>
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />

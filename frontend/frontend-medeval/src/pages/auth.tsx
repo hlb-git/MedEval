@@ -51,7 +51,9 @@ function Auth() {
     e.preventDefault();
     const response = await Login(formData.email, formData.password);
     if (response.status === 200){
-      const data = response.data
+      let data = response.data
+      data.page = 'Dashboard';
+      console.log(data.page);
       navigate('/dashboard', { state: {data}});
     }
   };
