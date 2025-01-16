@@ -24,33 +24,33 @@ function Sidebar({data}: {data: {[key: string]: any}}) {
             <FontAwesomeIcon icon={faChartLine} className="icon"/>
            Dashboard 
           </li>
-          <li>
+          <li id={data.page === 'Appointments' ? "selected": ""}>
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
             Appointments
           </li>
-          <li>
+          <li id={data.page === 'Medical Records' ? "selected": ""}>
             <FontAwesomeIcon icon={faFileMedical} className="icon" />
             Medical Records
           </li>
-          <li>
+          <li id={data.page === 'Teleconsultations' ? "selected": ""}>
             <FontAwesomeIcon icon={faVideo} className="icon" />
             Teleconsultations
           </li>
-          <li>
+          <li id={data.page === 'Prescriptions' ? "selected": ""}>
             <FontAwesomeIcon icon={faFilePrescription} className="icon" />
             Prescriptions
           </li>
-          <li>
+          <li id={data.page === 'Notifications' ? "selected": ""}>
             <FontAwesomeIcon icon={faBell} className="icon" />
             Notifications
           </li>
         </ul>
         <ul className="controls">
-          <li>
+          <li id={data.page === 'Settings' ? "selected": ""}>
             <FontAwesomeIcon icon={faCog} className="icon" />
             Settings
           </li>
-          <li>
+          <li id={data.page === 'Support' ? "selected": ""}>
             <FontAwesomeIcon icon={faQuestionCircle} className="icon" />
             Support
           </li>
