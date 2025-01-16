@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import {useState} from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine,
   faCalendarCheck,
@@ -12,6 +12,8 @@ import { faChartLine,
   faSignOutAlt, 
 } from "@fortawesome/free-solid-svg-icons";
 
+function Sidebar({data}: {data: {[key: string]: any}}) {
+
   const items= [
     'Dashboard', 
     'Appointments',
@@ -22,8 +24,8 @@ import { faChartLine,
     'Settings',
     'Support'
   ];
+
 const [active, setActive] = useState(items[0]);
-function Sidebar({data}: {data: {[key: string]: any}}) {
 
   return (
     <div className="sbar_wrapper">
@@ -34,37 +36,38 @@ function Sidebar({data}: {data: {[key: string]: any}}) {
         </div>
         <ul className="sbar_menu">
         <li onClick={() => {setActive(items[0])}}
-            id={data.page === 'Dashboard' ? "selected": ""}>
+            id={active === 'Dashboard' ? "selected": ""}>
             <FontAwesomeIcon icon={faChartLine} className="icon"/>
            Dashboard 
           </li>
-          <li id={data.page === 'Appointments' ? "selected": ""}>
+          <li onClick={() => {setActive(items[1])}}
+            id={active === 'Appointments' ? "selected": ""}>
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
             Appointments
           </li>
-          <li id={data.page === 'Medical Records' ? "selected": ""}>
+          <li id={active === 'Medical Records' ? "selected": ""}>
             <FontAwesomeIcon icon={faFileMedical} className="icon" />
             Medical Records
           </li>
-          <li id={data.page === 'Teleconsultations' ? "selected": ""}>
+          <li id={active === 'Teleconsultations' ? "selected": ""}>
             <FontAwesomeIcon icon={faVideo} className="icon" />
             Teleconsultations
           </li>
-          <li id={data.page === 'Prescriptions' ? "selected": ""}>
+          <li id={active === 'Prescriptions' ? "selected": ""}>
             <FontAwesomeIcon icon={faFilePrescription} className="icon" />
             Prescriptions
           </li>
-          <li id={data.page === 'Notifications' ? "selected": ""}>
+          <li id={active === 'Notifications' ? "selected": ""}>
             <FontAwesomeIcon icon={faBell} className="icon" />
             Notifications
           </li>
         </ul>
         <ul className="controls">
-          <li id={data.page === 'Settings' ? "selected": ""}>
+          <li id={active === 'Settings' ? "selected": ""}>
             <FontAwesomeIcon icon={faCog} className="icon" />
             Settings
           </li>
-          <li id={data.page === 'Support' ? "selected": ""}>
+          <li id={active === 'Support' ? "selected": ""}>
             <FontAwesomeIcon icon={faQuestionCircle} className="icon" />
             Support
           </li>
