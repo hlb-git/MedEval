@@ -45,29 +45,35 @@ const [active, setActive] = useState(items[0]);
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
             Appointments
           </li>
-          <li id={active === 'Medical Records' ? "selected": ""}>
+          <li onClick={() => {setActive(items[2])}}
+              id={active === 'Medical Records' ? "selected": ""}>
             <FontAwesomeIcon icon={faFileMedical} className="icon" />
             Medical Records
           </li>
-          <li id={active === 'Teleconsultations' ? "selected": ""}>
+          <li onClick={() => {setActive(items[3])}}
+              id={active === 'Teleconsultations' ? "selected": ""}>
             <FontAwesomeIcon icon={faVideo} className="icon" />
             Teleconsultations
           </li>
-          <li id={active === 'Prescriptions' ? "selected": ""}>
+          <li onClick={() => {setActive(items[4])}}
+              id={active === 'Prescriptions' ? "selected": ""}>
             <FontAwesomeIcon icon={faFilePrescription} className="icon" />
             Prescriptions
           </li>
-          <li id={active === 'Notifications' ? "selected": ""}>
+          <li onClick={() => {setActive(items[5])}}
+              id={active === 'Notifications' ? "selected": ""}>
             <FontAwesomeIcon icon={faBell} className="icon" />
             Notifications
           </li>
         </ul>
         <ul className="controls">
-          <li id={active === 'Settings' ? "selected": ""}>
+          <li onClick={() => {setActive(items[6])}}
+              id={active === 'Settings' ? "selected": ""}>
             <FontAwesomeIcon icon={faCog} className="icon" />
             Settings
           </li>
-          <li id={active === 'Support' ? "selected": ""}>
+          <li onClick={() => {setActive(items[7])}}
+              id={active === 'Support' ? "selected": ""}>
             <FontAwesomeIcon icon={faQuestionCircle} className="icon" />
             Support
           </li>
