@@ -1,4 +1,5 @@
 import "./sidebar.css";
+import {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine,
   faCalendarCheck,
@@ -11,7 +12,19 @@ import { faChartLine,
   faSignOutAlt, 
 } from "@fortawesome/free-solid-svg-icons";
 
+  const items= [
+    'Dashboard', 
+    'Appointments',
+    'Medical Records',
+    'Teleconsultations',
+    'Prescriptions',
+    'Notifications',
+    'Settings',
+    'Support'
+  ];
+const [active, setActive] = useState(items[0]);
 function Sidebar({data}: {data: {[key: string]: any}}) {
+
   return (
     <div className="sbar_wrapper">
       <div className="sbar_container">
@@ -20,7 +33,8 @@ function Sidebar({data}: {data: {[key: string]: any}}) {
           <span className="email"> {data.email} </span>
         </div>
         <ul className="sbar_menu">
-        <li id={data.page === 'Dashboard' ? "selected": ""}>
+        <li onClick={() => {setActive(items[0])}}
+            id={data.page === 'Dashboard' ? "selected": ""}>
             <FontAwesomeIcon icon={faChartLine} className="icon"/>
            Dashboard 
           </li>
