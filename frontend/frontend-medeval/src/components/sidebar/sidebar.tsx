@@ -1,5 +1,6 @@
 import "./sidebar.css";
-import React, {useState} from 'react';
+import Overview from '../overview/overview';
+import {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine,
   faCalendarCheck,
