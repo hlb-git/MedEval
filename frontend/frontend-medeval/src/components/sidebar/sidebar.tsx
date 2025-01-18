@@ -14,7 +14,7 @@ import { faChartLine,
 
 
 
-function Sidebar({data}: {data: {[key: string]: any}}) {
+function Sidebar() {
 
   const items= [
     'Dashboard', 
@@ -34,8 +34,8 @@ const [active, setActive] = useState(items[0]);
     <div className="sbar_wrapper">
       <div className="sbar_container">
         <div className="profile">
-          <span className="welcome"> Welcome, {data.firstname} </span>
-          <span className="email"> {data.email} </span>
+          <span className="welcome"> Welcome, (data.firstname) </span>
+          <span className="email"> (data.email) </span>
         </div>
         <ul className="sbar_menu">
         <li onClick={() => {setActive(items[0]);}}
