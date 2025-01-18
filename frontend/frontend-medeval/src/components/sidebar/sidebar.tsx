@@ -13,6 +13,8 @@ import { faChartLine,
   faSignOutAlt, 
 } from "@fortawesome/free-solid-svg-icons";
 
+
+
 function Sidebar({data}: {data: {[key: string]: any}}) {
 
   const items= [
@@ -28,7 +30,10 @@ function Sidebar({data}: {data: {[key: string]: any}}) {
 
 const [active, setActive] = useState(items[0]);
 
+
   return (
+    <>
+    <div className="big_frame">
     <div className="sbar_wrapper">
       <div className="sbar_container">
         <div className="profile">
@@ -36,7 +41,7 @@ const [active, setActive] = useState(items[0]);
           <span className="email"> {data.email} </span>
         </div>
         <ul className="sbar_menu">
-        <li onClick={() => {setActive(items[0])}}
+        <li onClick={() => {setActive(items[0]);}}
             id={active === 'Dashboard' ? "selected": ""}>
             <FontAwesomeIcon icon={faChartLine} className="icon"/>
            Dashboard 
@@ -85,6 +90,11 @@ const [active, setActive] = useState(items[0]);
           </ul>
       </div>
     </div>
+    <div className="mainpage">
+      <Overview />
+    </div>
+    </div>
+    </>
   )
 }
 
