@@ -1,5 +1,4 @@
 import "./sidebar.css";
-import Overview from '../overview/overview';
 import {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine,
@@ -32,8 +31,6 @@ const [active, setActive] = useState(items[0]);
 
 
   return (
-    <>
-    <div className="big_frame">
     <div className="sbar_wrapper">
       <div className="sbar_container">
         <div className="profile">
@@ -90,11 +87,6 @@ const [active, setActive] = useState(items[0]);
           </ul>
       </div>
     </div>
-    <div className="mainpage">
-      <Overview />
-    </div>
-    </div>
-    </>
   )
 }
 
