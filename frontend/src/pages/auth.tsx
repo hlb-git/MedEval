@@ -1,6 +1,7 @@
 import { NewPatient, Login } from "../components/authentications";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import {userDataContext} from '../App'
 import illustration from "../assets/illustration.jpg";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
