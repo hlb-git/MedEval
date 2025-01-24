@@ -32,6 +32,7 @@ function Sidebar() {
   const [userData, setUserData] = useContext(userDataContext);
   let user = userData;
   console.log('contextData', user);
+
   useEffect(() => {
     if (userData.page) {
      setActive(userData.page);
@@ -46,12 +47,12 @@ function Sidebar() {
           <span className="email"> {user.email} </span>
         </div>
         <ul className="sbar_menu">
-        <li onClick={() => { user.page = items[0]; setUserData(user)}}
+        <li onClick={() => {setActive(items[0])}}
             id={active === 'Dashboard' ? "selected": ""}>
             <FontAwesomeIcon icon={faChartLine} className="icon"/>
            Dashboard 
           </li>
-          <li onClick={() => {user.page = items[1]; setUserData(user)}}
+          <li onClick={() => {setActive(items[1])}}
             id={active === 'Appointments' ? "selected": ""}>
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
             Appointments
