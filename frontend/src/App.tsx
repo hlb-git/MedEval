@@ -52,7 +52,7 @@ function Layout() {
 
 
 function App() {
-  const [userData, setUserData] = useState({firstname: 'test'});
+  const [userData, setUserData] = useState({});
   return (
     <userDataContext.Provider value={[userData, setUserData]}>
       <Router>

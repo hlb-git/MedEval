@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import {userDataContext} from '../../App';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine,
@@ -30,24 +30,28 @@ function Sidebar() {
 
   const [active, setActive] = useState(items[0]);
   const [userData, setUserData] = useContext(userDataContext);
-  let data = userData;
-  console.log('contextData', data);
-  if (userData.page) setActive(userData.page);
+  let user = userData;
+  console.log('contextData', user);
+  useEffect(() => {
+    if (userData.page) {
+     setActive(userData.page);
+   }
+  }, [userData.page]);
 
   return (
     <div className="sbar_wrapper">
       <div className="sbar_container">
         <div className="profile">
-          <span className="welcome"> Welcome, {data.firstname} </span>
-          <span className="email"> (data.email) </span>
+          <span className="welcome"> Welcome, {user.firstname} </span>
+          <span className="email"> {user.email} </span>
         </div>
         <ul className="sbar_menu">
-        <li onClick={() => { data.page = items[0]; setUserData(data)}}
+        <li onClick={() => { user.page = items[0]; setUserData(user)}}
             id={active === 'Dashboard' ? "selected": ""}>
             <FontAwesomeIcon icon={faChartLine} className="icon"/>
            Dashboard 
           </li>
-          <li onClick={() => {data.page = items[1]; setUserData(data)}}
+          <li onClick={() => {user.page = items[1]; setUserData(user)}}
             id={active === 'Appointments' ? "selected": ""}>
             <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
             Appointments

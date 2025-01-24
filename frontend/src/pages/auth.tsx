@@ -19,6 +19,7 @@ import {
 } from "mdb-react-ui-kit";
 
 function Auth() {
+  const [userData, setUserData] = useContext(userDataContext);
   const [isSignup, setSignup] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -51,8 +52,9 @@ function Auth() {
     if (response.status === 200) {
       let data = response.data;
       data.page = "Dashboard";
-      console.log(data.page);
-      navigate("/dashboard", { state: { data } });
+      setUserData(data);
+      console.log('userData', userData)
+      navigate("/dashboard");
     }
   };
 
