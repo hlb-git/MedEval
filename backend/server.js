@@ -46,7 +46,7 @@ app.use(
             },
         })
 );
-app.get('/', (req, res) => {
+app.get('/api/docs', (req, res) => {
     res.sendFile(__dirname + '/documentation.html');
 });
 app.use(patientRoutes);
