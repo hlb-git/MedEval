@@ -111,7 +111,7 @@ Medeval is licensed under the MIT License.
 
 For inquiries, reach out via:
 
-- Email: [your.email@example.com](mailto\:mzeelovegeneral@gmail.com)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/love-omoseebi)
-- Twitter: [@yourhandle](https://twitter.com/0xHLB)
+- Email: [mzeelovegeneral@gmail.com](mailto\:mzeelovegeneral@gmail.com)
+- LinkedIn: [Love Omoseebi](https://linkedin.com/in/love-omoseebi)
+- Twitter: [@0xHLB](https://twitter.com/0xHLB)
 
