@@ -6,8 +6,8 @@ function Hero() {
       <div className="hero-container">
         <div className="hero-content">
           <h1>
-            Revolutionizing healthcare with seamless telemedicine and secure
-            digital medical records
+            Healthcare With Seamless Telemedicine and Secure
+            Digital Medical Records
           </h1>
           <p>
             MedEval is a digital health platform that provides telemedicine
@@ -16,12 +16,10 @@ function Hero() {
           </p>
           <div className="cta-button">
             <button className="get-started">
-              Get Started{" "}
-              <span className="material-symbols-outlined">arrow_forward</span>
+              Get Started
             </button>
             <button className="learn-more">
-              Learn More{" "}
-              <span className="material-symbols-outlined">dictionary</span>
+              Learn More
             </button>
           </div>
         </div>

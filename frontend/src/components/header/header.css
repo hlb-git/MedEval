@@ -31,15 +31,16 @@
 
 /* Navigation menu styling */
 .h-menu {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .h-menu a {
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: #333333;
   text-decoration: none;
   transition: color 300ms ease;
@@ -59,30 +60,32 @@
 /* Log In link styled as a secondary button */
 .cta a {
   font-family: 'Public Sans', sans-serif;
-  font-size: 16px ;
+  font-size: 14px ;
   font-weight: 700;
-  color: #3ab54a;
+  color: #fff;
+  background: #000;
   text-decoration: none;
   padding: 3px 1rem;
-  border: 2px solid #3ab54a;
+  border: 2px solid #000;
   border-radius: 5px;
   transition: background-color 300ms ease, color 300ms ease;
 }
 
 .cta a:hover {
-  background-color: #3ab54a;
-  color: #ffffff;
+  background-color: #fff;
+  color: #111;
+
 }
 
 /* Sign Up button with modern hover elevation */
 .cta button {
   font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   padding: 4px 1rem;
   border: none;
   border-radius: 5px;
-  background-color: #3ab54a;
+  background-color: #6822FF;
   color: #ffffff;
   cursor: pointer;
   transition: transform 300ms ease, box-shadow 300ms ease;
