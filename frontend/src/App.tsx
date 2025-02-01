@@ -35,7 +35,7 @@ function Layout() {
   return (
     <div style={{ display: "flex" , margin: 0, padding: 0}}>
     {sidebarVisible && <Sidebar />}
-      <div style={{flex: 1, padding: "20px"}}>
+      <div style={{flex: 1}}>
       <Routes>
         <Route path="/" element={
             <Home />

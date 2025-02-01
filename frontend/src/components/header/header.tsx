@@ -13,11 +13,10 @@ function Header() {
         </div>
         <div className="cta">
           <a href="" className="log-in">
-            Log In <span className="material-symbols-outlined">login</span>
+            Log In 
           </a>
           <button className="sign-up">
-            Sign Up{" "}
-            <span className="material-symbols-outlined">arrow_forward</span>
+            Sign Up
           </button>
         </div>
       </div>

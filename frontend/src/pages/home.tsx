@@ -5,14 +5,12 @@ import Footer from "../components/footer/footer";
 
 function Home() {
   return (
-    <>
-      <div>
+      <div style={{ background: "#F4F5F9"}}>
         <Header />
         <Hero />
         <Body />
         <Footer />
       </div>
-    </>
   );
 }
 
