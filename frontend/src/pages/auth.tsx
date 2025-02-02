@@ -5,6 +5,7 @@ import {userDataContext} from '../App'
 import illustration from "../assets/illustration.jpg";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Header from '../components/header/header';
 import {
   MDBBtn,
   MDBContainer,
@@ -59,6 +60,8 @@ function Auth() {
   };
 
   return (
+    <>
+    <Header/>
     <MDBContainer fluid>
       <MDBCard
         className="text-black m-5"
@@ -125,12 +128,6 @@ function Auth() {
                         onChange={handleChange}
                       />
                     </div>
-                    <MDBCheckbox
-                      name="flexCheck"
-                      value=""
-                      id="flexCheckDefault"
-                      label="Subscribe to our newsletter"
-                    />
                   </>
                 ) : (
                   <>
@@ -173,7 +170,7 @@ function Auth() {
                   </a>
                 </p>
 
-                <MDBBtn className="mb-4" size="lg" type="submit">
+                <MDBBtn className="mb-4" style={{background: "#6822FF"}} size="lg" type="submit">
                   {isSignup ? "Signup" : "Login"}
                 </MDBBtn>
               </form>
@@ -194,6 +191,7 @@ function Auth() {
         </MDBCardBody>
       </MDBCard>
     </MDBContainer>
+    </>
   );
 }
 export default Auth;
