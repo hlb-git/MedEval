@@ -59,7 +59,7 @@
 }
 
 /* Log In link styled as a secondary button */
-.cta a {
+.log-in {
   font-family: 'Public Sans', sans-serif;
   font-size: 14px ;
   font-weight: 700;
@@ -69,12 +69,12 @@
   padding: 3px 1rem;
   border: 2px solid #000;
   border-radius: 5px;
-  transition: background-color 300ms ease, color 300ms ease;
 }
 
-.cta a:hover {
+.cta .log-in:hover {
   background-color: #fff;
   color: #111;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -89,12 +89,10 @@
   background-color: #6822FF;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
 .cta button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive adjustments (optional) */

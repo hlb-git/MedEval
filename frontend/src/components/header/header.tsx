@@ -1,5 +1,6 @@
 import "./header.css";
 import medvLogo from "../../assets/medeval-logo.png";
+import {Link} from 'react-router-dom';
 
 function Header() {
   return (
@@ -7,17 +8,19 @@ function Header() {
       <div className="h-container">
         <img src={medvLogo} alt="logo" className="logo" />
         <div className="h-menu">
-          <a href="">Health Clinic</a>
-          <a href="">About Us</a>
-          <a href="">Resources</a>
+          <Link to="/#">Health Clinic</Link>
+          <Link to="/#">About Us</Link>
+          <Link to="/#">Resources</Link>
         </div>
         <div className="cta">
-          <a href="" className="log-in">
+          <Link to="/auth" className="log-in">
             Log In 
-          </a>
-          <button className="sign-up">
-            Sign Up
-          </button>
+          </Link>
+          <Link to="/auth">
+            <button className="sign-up">
+              Sign Up
+            </button>
+          </Link>
         </div>
       </div>
     </section>
