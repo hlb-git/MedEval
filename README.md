@@ -1,4 +1,9 @@
-# Medeval
+# MedEval
+
+
+![image](https://github.com/user-attachments/assets/9b29cecd-d3f1-4f92-80ac-379748ca4319)
+
+
 
 
 
@@ -11,10 +16,9 @@ Medeval is a cutting-edge healthtech solution designed to streamline medical rec
 ## 🚀 Features
 
 - 🏥 **Medical Records Management** - Secure and efficient record-keeping.
-- 💬 **Telemedicine** - Virtual consultations and appointments.
-- 📊 **Interactive Dashboard** - Real-time health analytics and insights.
+- 💬 **Telemedicine** - Virtual consultations and appointments. (in Progress)
+- 📊 **Interactive Dashboard** - Real-time health analytics and insights. (in Progress)
 - 🔒 **Secure Authentication** - Role-based access control (RBAC).
-- 🖥 **Single Page Application (SPA)** - Smooth user experience with React.
 - 🛠 **Scalable Backend** - Built with Node.js, Express, and MySQL.
 
 ---
@@ -38,7 +42,8 @@ Medeval is a cutting-edge healthtech solution designed to streamline medical rec
 
 ### Deployment & DevOps:
 
-- AWS EC2
+- Vercel
+- AWS
 - Docker Compose
 
 ---
