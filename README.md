@@ -1,7 +1,8 @@
 # MedEval
 
 
-![image](https://github.com/user-attachments/assets/cd8c9603-6326-4bb1-a6c1-794b6b1527c3)
+![image](https://github.com/user-attachments/assets/9b29cecd-d3f1-4f92-80ac-379748ca4319)
+
 
 
 
