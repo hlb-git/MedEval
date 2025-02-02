@@ -2,6 +2,7 @@ import "./hero.css";
 
 function Hero() {
   return (
+    <>
     <section className="hero-wrapper">
       <div className="hero-container">
         <div className="hero-content">
@@ -25,6 +26,7 @@ function Hero() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

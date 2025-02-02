@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import {createContext, useState} from 'react';
+import './App.css'
 import Auth from "./pages/auth";
 import Home from "./pages/home";
 import Dashboard from "./pages/dashboard";
@@ -33,7 +34,7 @@ function Layout() {
   );
 
   return (
-    <div style={{ display: "flex" , margin: 0, padding: 0}}>
+    <div style={{ display: "flex" , background: "#F4F5F9"}}>
     {sidebarVisible && <Sidebar />}
       <div style={{flex: 1}}>
       <Routes>

@@ -1,8 +1,9 @@
 /* Overall header wrapper with subtle shadow and spacing */
 .h-wrapper {
   margin: auto;
+  margin-top: 1rem;
   padding-top: 2rem;
-  width: 90%;
+  width: 85%;
   background-color: #ffffff;
   padding: 10px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
