@@ -36,21 +36,21 @@
     font-weight: 700;
     font-family: "Poppins", sans-serif;
     padding: 2rem 0 0 4rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
   .left p {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Public Sans", sans-serif;
     padding: 0 2rem 0 4rem;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
   .left {
+    margin-top: 3rem;
     display: block;
     align-items: center;
     flex: 1;
-    /* padding-right: 2rem; */
     color: #fff;
   }
 
